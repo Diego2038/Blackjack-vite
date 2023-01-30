@@ -1,7 +1,9 @@
-import crearDeck, { miNombre } from "./usecases/crear-deck";
+/* import crearDeck, { miNombre } from "./usecases/crear-deck";
 import pedirCarta from "./usecases/pedir-carta";
 import valorCarta from "./usecases/valor-carta";
+ */
 
+import { crearDeck, miNombre, pedirCarta, valorCarta} from './usecases'
 console.log({ miNombre })
 
 /**
@@ -32,7 +34,7 @@ const puntosHTML = document.querySelectorAll('small');
 
 deck = crearDeck( tipos, especiales );
 
-console.log('el deck!' , deck)
+// console.log('el deck!' , deck)
 pedirCarta( deck );
 
 

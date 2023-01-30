@@ -4,7 +4,7 @@
  * @param {String} carta String el cual tiene el nombre de la carta
  * @returns {Number} Valor de la carta
  */
-const valorCarta = ( carta ) => {
+export const valorCarta = ( carta ) => {
 
   const valor = carta.substring(0, carta.length - 1);
   return ( isNaN( valor ) ) ? 
@@ -12,4 +12,4 @@ const valorCarta = ( carta ) => {
     : valor * 1;
 }
 
-export default valorCarta;
+// export default valorCarta;

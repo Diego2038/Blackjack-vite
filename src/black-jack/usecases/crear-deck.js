@@ -15,7 +15,7 @@ export const miNombre = 'Juan Diego';
  * @param { Array<String>} tiposEspeciales Ejemplo: ['A','J','Q','K']
  * @returns { Array<String> } retorna un mazo de cartas
  */
-const crearDeck = ( tiposDeCarta, tiposEspeciales) => {
+export const crearDeck = ( tiposDeCarta, tiposEspeciales) => {
 
   if( !tiposDeCarta || tiposDeCarta.length === 0 ) throw 'tiposDeCarta debe de ser un arreglo con elementos';
   if( !tiposEspeciales || tiposEspeciales.length === 0 ) throw 'tiposEspeciales debe de ser un arreglo con elementos';
@@ -34,8 +34,7 @@ const crearDeck = ( tiposDeCarta, tiposEspeciales) => {
   }
   // console.log( deck );
   deck = _.shuffle( deck );
-  console.log( deck );
+//   console.log( deck );
   return deck;
 }
-
-export default crearDeck;
+ 
