@@ -1,5 +1,5 @@
 // turno de la computadora
-import { pedirCarta, valorCarta } from "./";
+import { pedirCarta, valorCarta, crearCarta } from "./";
 /**
  * 
  * @param { Number } puntosMinimos Puntos mínimos que necesita la computadora
@@ -19,13 +19,9 @@ import { pedirCarta, valorCarta } from "./";
       const carta = pedirCarta( deck );
 
       puntosComputadora = puntosComputadora + valorCarta( carta );
-      puntosHTML.innerText = puntosComputadora;
-      
-      // <img class="carta" src="assets/cartas/2C.png">
-      const imgCarta = document.createElement('img');
-      imgCarta.src = `assets/cartas/${ carta }.png`; //3H, JD
-      imgCarta.classList.add('carta');
-      divCartasComputadora.append( imgCarta );
+      puntosHTML.innerText = puntosComputadora; 
+
+      crearCarta( carta, divCartasComputadora );
 
       if( puntosMinimos > 21 ) {
           break;

@@ -3,7 +3,7 @@ import pedirCarta from "./usecases/pedir-carta";
 import valorCarta from "./usecases/valor-carta";
  */
 
-import { crearDeck, miNombre, pedirCarta, valorCarta, turnoComputadora} from './usecases'
+import { crearDeck, miNombre, pedirCarta, valorCarta, turnoComputadora, crearCarta} from './usecases'
 console.log({ miNombre })
 
 /**
@@ -50,11 +50,9 @@ btnPedir.addEventListener('click', () => {
     puntosJugador = puntosJugador + valorCarta( carta );
     puntosHTML[0].innerText = puntosJugador;
     
-    // <img class="carta" src="assets/cartas/2C.png">
-    const imgCarta = document.createElement('img');
-    imgCarta.src = `assets/cartas/${ carta }.png`; //3H, JD
-    imgCarta.classList.add('carta');
-    divCartasJugador.append( imgCarta );
+    
+
+    crearCarta( carta, divCartasJugador )
 
     if ( puntosJugador > 21 ) {
         console.warn('Lo siento mucho, perdiste');
