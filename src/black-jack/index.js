@@ -60,13 +60,13 @@ btnPedir.addEventListener('click', () => {
         console.warn('Lo siento mucho, perdiste');
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
-        turnoComputadora( puntosJugador, puntosComputadora, puntosHTML, divCartasComputadora, deck );
+        turnoComputadora( puntosJugador, puntosComputadora, puntosHTML[1], divCartasComputadora, deck );
 
     } else if ( puntosJugador === 21 ) {
         console.warn('21, genial!');
         btnPedir.disabled   = true;
         btnDetener.disabled = true;
-        turnoComputadora( puntosJugador, puntosComputadora, puntosHTML, divCartasComputadora, deck );
+        turnoComputadora( puntosJugador, puntosComputadora, puntosHTML[1], divCartasComputadora, deck );
     }
 
 });
@@ -76,7 +76,7 @@ btnDetener.addEventListener('click', () => {
     btnPedir.disabled   = true;
     btnDetener.disabled = true;
 
-    turnoComputadora( puntosJugador, puntosComputadora, puntosHTML, divCartasComputadora, deck );
+    turnoComputadora( puntosJugador, puntosComputadora, puntosHTML[1], divCartasComputadora, deck );
 });
 
 btnNuevo.addEventListener('click', () => {
