@@ -1,6 +1,9 @@
 import _ from 'underscore'
-// Esta función crea un nuevo deck
-export const crearDeck = ( tiposDeCarta, tiposEspeciales) => {
+// Se puede mezclar las exportaciones separadas como por defecto
+
+export const miNombre = 'Juan Diego';
+
+const crearDeck = ( tiposDeCarta, tiposEspeciales) => {
 
   let deck = [];
 
@@ -20,3 +23,5 @@ export const crearDeck = ( tiposDeCarta, tiposEspeciales) => {
   console.log( deck );
   return deck;
 }
+
+export default crearDeck;

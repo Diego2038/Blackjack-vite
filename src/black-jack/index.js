@@ -1,4 +1,6 @@
-import { crearDeck } from "./usecases/crear-deck";
+import crearDeck, { miNombre } from "./usecases/crear-deck";
+
+console.log({ miNombre })
 
 /**
  * 2C = Two of Clubs
